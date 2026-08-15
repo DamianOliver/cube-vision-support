@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cube-Vision Support</title>
+<meta name="description" content="Support, help and contact for Cube-Vision: the 3x3 speedcubing timer that reconstructs your solve from video, entirely on your device.">
+<meta name="theme-color" content="#0b0c0e">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta property="og:title" content="Cube-Vision Support">
+<meta property="og:description" content="Help, FAQ and contact for the Cube-Vision speedcubing app.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="./">
+      <span class="mark"><img src="icon.png" alt=""></span>
+      <span class="brand-name">Cube-Vision</span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="#features">The app</a>
+      <a href="#faq">Help</a>
+      <a href="#contact">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <span class="mark mark-lg"><img src="icon.png" alt="Cube-Vision app icon"></span>
+      <h1>Cube-Vision Support</h1>
+      <p class="lead">
+        Move by move solve reconstructions and analysis using only your smartphone's camera.
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#contact">Email support</a>
+        <a class="btn" href="#faq">Browse the FAQ</a>
+      </div>
+      <p class="micro">Questions, bug reports and feature requests all go to the same inbox.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap block">
+      <h2>How a solve works</h2>
+      <ol class="steps">
+        <li>
+          <span class="step-n">1</span>
+          <div>
+            <h3>Scramble and start</h3>
+            <p>
+              Use the generated scramble on screen, with white top green front. Your scramble must match the displayed scramble
+              or tracking will fail. 
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="step-n">2</span>
+          <div>
+            <h3>Solve on camera</h3>
+            <p>
+              The front camera records while you solve. Keep the cube in the yellow frame and reasonably well lit and
+              the recording is all the app needs.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="step-n">3</span>
+          <div>
+            <h3>Review the reconstruction</h3>
+            <p>Move extraction runs in the background and the finished solve appears in your stats with its
+              move list, per-move times, phase split and PLL/OLL case.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="faq" class="wrap block">
+    <h2>Frequently asked questions</h2>
+
+    <h3 class="faq-group">Getting started</h3>
+
+    <details>
+      <summary>Do I need an account or an internet connection?</summary>
+      <p>No to both. There is no sign-up, and all video processing runs on device. </p>
+    </details>
+
+    <details>
+      <summary>Which cubes are supported?</summary>
+      <p>Cube-Vision expects a stickerless cube with the standard color scheme. <strong>Stickered cubes are not
+        supported yet.</strong> Move tracking for cubes with more faded colors, bright colored internals, or especially bright
+        logo stickers may be less consistent.
+      </p>
+    </details>
+
+    <h3 class="faq-group">Move extraction</h3>
+
+    <details>
+      <summary>Extraction is slow. Can I speed it up?</summary>
+      <p>There are several factors that affect move extraction speed. Timer hand tracking is the largest, as this will
+        block reconstruction from running in the background while a solve is in progress. If you are a beginner or know you have
+        lower burst TPS, you can also try lowering the extraction FPS in settings.
+      </p>
+    </details>
+
+    <details>
+      <summary>The reconstruction is wrong or missing moves.</summary>
+      <p>Reconstructing a solve is incredibly complex, and perfect 100% accuracy will likely never be achieved.
+        However, in good conditions Cube-Vision can get close to 100%. If you see 3 or more failed solves in a row
+        this is a strong sign that your environment is particularly difficult. Factors that reduce performance include:
+      </p>
+      <ul style="padding-left: 45px">
+        <li>
+          Bad camera angle: if only one face of the cube is visible to the camera for much of the solve this is not enough
+          information for consistent tracking. Position your camera so that the top and front of the cube are visible for most of the solve.
+          The camera should be aligned head on with the front of the cube, not at a 45 degree angle (as this makes it difficult to determine
+          which face is the front face).
+        </li>
+        <li>
+          Bad lighting: strong colored lighting, most commonly strong warm light, makes tracking more difficult.
+          The model should handle this in most cases but if you seeing tracking fail consider finding more neutral lighting.
+        </li>
+        <li>
+          Other cubes in frame: Cube-Vision does not distinguish between the cube you are holding and a picture of a cube
+          on your shirt. Be careful that there are no other cubes or pictures of cubes in frame.
+        </li>
+        <li>
+          If none of these factors can explain the issue, send a video of the failed solve to me and I'd love to take a look
+          at it. (If you've saved the video you can just use Share Solve and then send it to my email: damianpiechdev@gmail.com with the subject
+          "Tracking Failed") I'll get back you when I've diagnosed the issue and / or ask your permission to add the solve to the training data.
+        </li>
+      </ul>
+    </details>
+
+    <h3 class="faq-group">Timer Hand Tracking</h3>
+
+    <details>
+      <summary>Hand tracking is not starting / not stopping / stopping too soon</summary>
+      <p>
+        Ensure that your hands are in frame when starting / stopping.
+      </p>
+      <p>Refining the hand tracking is still WIP, if it continues to cause problems, turn <strong>Settings → Timer → Timer Hand Tracking</strong> off and use the
+        tap timer instead.</p>
+    </details>
+
+    <h3 class="faq-group">Data and storage</h3>
+
+    <details>
+      <summary>The app is using a lot of storage.</summary>
+      <p>
+        Saved solve videos are stored on device and their storage may start to add up. Consider saving vidoes more sparingly
+        and delete solves' videos with "Delete Video". The solve time and reconstruction will be unaffected.
+      </p>
+    </details>
+  </section>
+
+  <section id="contact" class="band">
+    <div class="wrap block">
+      <h2>Contact</h2>
+      <div class="contact-card">
+        <p class="contact-lead">
+          If the FAQ did not cover it, please get in touch. Support for Cube-Vision is handled directly by me,
+          the developer, and I read every message.
+        </p>
+        <p class="email-row">
+          <a class="btn btn-primary" href="mailto:damianpiechdev@gmail.com?subject=Cube-Vision%20support">damianpiechdev@gmail.com</a>
+          <button class="btn" type="button" data-copy="damianpiechdev@gmail.com">Copy address</button>
+        </p>
+        <p class="micro">
+          I usually reply within a few days. If your browser has no mail app set up, copy the address instead.
+        </p>
+
+        <h3>Reporting a bug</h3>
+        <p>To save a round trip, it helps a lot if you include:</p>
+        <ul>
+          <li>Your device model</li>
+          <li>What you did, what you expected, and what happened instead</li>
+          <li>If possible, steps to replicate the bug are very helpful</li>
+          <li>Whether it happens every time or only occasionally</li>
+        </ul>
+        <p>
+          For a bad reconstruction, the exported solve video is the most useful thing. You can easily send it to me 
+          with the "Share Solve" button → email → damianpiechdev@gmail.com if you have the video saved.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = btn.getAttribute('data-copy');
+      var label = btn.textContent;
+
+      function confirmed() {
+        btn.textContent = 'Copied';
+        setTimeout(function () { btn.textContent = label; }, 1600);
+      }
+
+      // execCommand is the fallback for insecure contexts, where navigator.clipboard is absent.
+      function legacyCopy() {
+        var field = document.createElement('textarea');
+        field.value = text;
+        field.setAttribute('readonly', '');
+        field.style.position = 'fixed';
+        field.style.opacity = '0';
+        document.body.appendChild(field);
+        field.select();
+        try { document.execCommand('copy'); confirmed(); } catch (e) { /* leave the address visible */ }
+        document.body.removeChild(field);
+      }
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(confirmed, legacyCopy);
+      } else {
+        legacyCopy();
+      }
+    });
+  });
+</script>
+
+<footer class="footer">
+  <div class="wrap foot-inner">
+    <p>Cube-Vision, a 3&times;3 speedcubing timer with automatic solve reconstruction.</p>
+    <p class="micro">
+      <a href="privacy.html">Privacy policy</a> ·
+      <a href="mailto:damianpiechdev@gmail.com">damianpiechdev@gmail.com</a> ·
+      Last updated 15 August 2026
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
